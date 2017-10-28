@@ -1,0 +1,16 @@
+
+<br>
+<br>
+
+<%= render 'form', post: @post %>
+
+<% @posts.each do |post| %>
+  <tr>
+  	<td><%= link_to post.title, post_path(post.id) %></td>
+  	<td><%= post.body %></td>
+  	<td><%= post.user.nickname %></td>
+  </tr>
+  <br>
+  <br>
+<% end %>
+
